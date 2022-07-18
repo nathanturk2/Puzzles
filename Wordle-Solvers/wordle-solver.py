@@ -105,14 +105,11 @@ def absurd_guess(possible,valid_words):
 	print("\nExpected info gain:",round(best_gain,4),"bits")
 	return best_guess
 
-possible_answers=narrow(possible_answers,"toner","00000")
-possible_answers=narrow(possible_answers,"valid","02000")
-print(len(possible_answers))
 for w in possible_answers:
 	print(w)
 
 self_play=input("Self-play? ") in ["y","yes","t","true"]
-modes=["Wordle","Antiwordle","Absurdle"]
+modes=["Wordle","Survivle","Absurdle"]
 print("Modes:")
 for m in range(len(modes)):
 	print(str(m+1)+". "+modes[m])
